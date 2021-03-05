@@ -16,4 +16,16 @@
     <ProjectReference Include="..\RVezy.DevTest.Infrastructure\RVezy.DevTest.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestData\calendar.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\listings.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\reviews.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

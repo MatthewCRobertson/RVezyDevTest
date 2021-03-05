@@ -32,7 +32,7 @@ namespace RVezy.DevTest.UnitTests
 
             Assert.IsTrue(entity.id == 241032);
 
-            var searchResult = listingController.Get(0, 100, "Apartment");
+            var searchResult = listingController.Search(0, 100, "Apartment");
 
             Assert.IsTrue(searchResult.Count <= 100);
             Assert.IsTrue(searchResult.Where(x => x.property_type != "Apartment").Count() == 0);

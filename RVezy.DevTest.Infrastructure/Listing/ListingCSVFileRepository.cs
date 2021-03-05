@@ -13,7 +13,7 @@ using System.Text;
 
 namespace RVezy.DevTest.Infrastructure.Listing
 {
-    public class ListingCSVFileRepository : IListingRespository
+    public class ListingCSVFileRepository : IListingRepository
     {
         List<ListingEntity> listings = new List<ListingEntity>();
 
@@ -52,9 +52,9 @@ namespace RVezy.DevTest.Infrastructure.Listing
                         else
                         {
                             MapFieldsToEntity(header, fields, listingEntity);
-                        }
 
-                        this.listings.Add(listingEntity);
+                            this.listings.Add(listingEntity);
+                        }                        
                     }
                     catch
                     {
@@ -78,7 +78,7 @@ namespace RVezy.DevTest.Infrastructure.Listing
 
         public List<ListingEntity> Search(ListingSearch criteria)
         {
-            return this.listings.Where(x => x.property_type == criteria.PropertyType)
+            return this.listings.Where(x => x.property_type == criteria.PropertyType || criteria.PropertyType == null)
                 .Skip(criteria.Offset)
                 .Take(criteria.Limit)
                 .ToList();

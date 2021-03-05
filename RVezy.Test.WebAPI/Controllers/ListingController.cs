@@ -27,8 +27,8 @@ namespace RVezy.Test.WebAPI.Controllers
             return this.service.GetById(id);
         }
 
-        [HttpGet]
-        public List<ListingEntity> Get(int offset, int limit, string propertyType)
+        [HttpGet("search")]
+        public List<ListingEntity> Search(int offset, int limit, string propertyType)
         {
             ListingSearch listingSearch = new ListingSearch();
 

@@ -9,9 +9,9 @@ namespace RVezy.DevTest.Domain.Listing.Service
 {
     public class ListingService
     {
-        private IListingRespository repo;
+        private IListingRepository repo;
 
-        public ListingService(IListingRespository repo)
+        public ListingService(IListingRepository repo)
         {
             this.repo = repo;
         }
