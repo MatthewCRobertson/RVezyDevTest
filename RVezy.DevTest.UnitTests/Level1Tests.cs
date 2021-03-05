@@ -3,11 +3,14 @@ using RVezy.DevTest.Domain.Listing.Service;
 using RVezy.DevTest.Infrastructure.Listing;
 using RVezy.Test.WebAPI.Controllers;
 using System.IO;
+using System.Linq;
 
 namespace RVezy.DevTest.UnitTests
 {
     public class Tests
     {
+        ListingController listingController;
+
         [SetUp]
         public void Setup()
         {
@@ -17,17 +20,22 @@ namespace RVezy.DevTest.UnitTests
 
             ListingCSVFileRepository repo = new ListingCSVFileRepository(listingData);
             ListingService service = new ListingService(repo);
-            ListingController listingController = new ListingController(service);
+            listingController = new ListingController(service);
 
-            var entity = listingController.Get(241032);
 
-            Assert.IsTrue(entity.id == 241032);
         }
 
         [Test]
-        public void Test1()
+        public void SearchAndGets()
         {
-            Assert.Pass();
+            var entity = listingController.Get(241032);
+
+            Assert.IsTrue(entity.id == 241032);
+
+            var searchResult = listingController.Get(0, 100, "Apartment");
+
+            Assert.IsTrue(searchResult.Count <= 100);
+            Assert.IsTrue(searchResult.Where(x => x.property_type != "Apartment").Count() == 0);
         }
     }
 }

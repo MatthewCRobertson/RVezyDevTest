@@ -78,7 +78,10 @@ namespace RVezy.DevTest.Infrastructure.Listing
 
         public List<ListingEntity> Search(ListingSearch criteria)
         {
-            return new List<ListingEntity>();
+            return this.listings.Where(x => x.property_type == criteria.PropertyType)
+                .Skip(criteria.Offset)
+                .Take(criteria.Limit)
+                .ToList();
         }
     }
 }
