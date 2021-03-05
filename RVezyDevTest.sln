@@ -3,19 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.Test.WebAPI", "RVezy.Test.WebAPI\RVezy.Test.WebAPI.csproj", "{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVezy.Test.WebAPI", "RVezy.Test.WebAPI\RVezy.Test.WebAPI.csproj", "{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.Domain", "RVezy.DevTest.Domain\RVezy.DevTest.Domain.csproj", "{BABA2AAF-F25F-437E-83B3-B17B65946449}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVezy.DevTest.Domain", "RVezy.DevTest.Domain\RVezy.DevTest.Domain.csproj", "{BABA2AAF-F25F-437E-83B3-B17B65946449}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.Infrastructure", "RVezy.DevTest.Infrastructure\RVezy.DevTest.Infrastructure.csproj", "{D7412635-F63D-4D82-AEA0-60FDE32F16A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVezy.DevTest.Infrastructure", "RVezy.DevTest.Infrastructure\RVezy.DevTest.Infrastructure.csproj", "{D7412635-F63D-4D82-AEA0-60FDE32F16A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.UnitTests", "RVezy.DevTest.UnitTests\RVezy.DevTest.UnitTests.csproj", "{F66E6048-2A80-4145-896D-1A5247C0F8D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVezy.DevTest.UnitTests", "RVezy.DevTest.UnitTests\RVezy.DevTest.UnitTests.csproj", "{F66E6048-2A80-4145-896D-1A5247C0F8D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{1A65E0A1-73C6-4DA6-8D3C-32849165B7FA}"
-	ProjectSection(SolutionItems) = preProject
-		RVezyDevTest.mdf = RVezyDevTest.mdf
-		RVezyDevTest_log.ldf = RVezyDevTest_log.ldf
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
