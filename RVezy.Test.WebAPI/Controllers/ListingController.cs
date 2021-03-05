@@ -40,9 +40,9 @@ namespace RVezy.Test.WebAPI.Controllers
         }
 
         [HttpPost]
-        public void Create(CreateListing createListing)
+        public int Create(CreateListing createListing)
         {
-            this.service.Create(createListing);
+            return this.service.Create(createListing);
         }
 
         [HttpPut]

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace RVezy.DevTest.Domain.Calendar.Model
 {
     public class CalendarEntity
-    {
+    {        
+        [Key]
+        public int calendar_id { get; set; }
         public int listing_id { get; set; }
         public DateTime date { get; set; }
         public bool available { get; set; }

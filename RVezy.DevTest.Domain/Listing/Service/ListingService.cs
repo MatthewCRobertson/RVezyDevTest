@@ -26,14 +26,14 @@ namespace RVezy.DevTest.Domain.Listing.Service
             return this.repo.Search(criteria);
         }
 
-        public void Create(CreateListing createListing)
+        public int Create(CreateListing createListing)
         {
             ListingEntity listing = new ListingEntity();
 
             listing.name = createListing.Name;
             listing.property_type = createListing.PropertyType;
 
-            this.repo.Create(listing);
+            return this.repo.Create(listing);
         }
 
         public void Update(UpdateListing updateListing)

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RVezy.DevTest.Domain.Listing.Infrastructure;
 using RVezy.DevTest.Domain.Listing.Service;
+using RVezy.DevTest.Infrastructure;
 using RVezy.DevTest.Infrastructure.Listing;
 using System;
 using System.Collections.Generic;
@@ -30,17 +32,29 @@ namespace RVezy.Test.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            bool runAsLevelOne = true;
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RVezy.Test.WebAPI", Version = "v1" });
             });
 
-            services.AddScoped<IListingRepository>(x => { return new ListingCSVFileRepository(new FileInfo("TestData\\listings.csv")); });
+
+            // repo for V1!
+            if (runAsLevelOne)
+            {
+                services.AddScoped<IListingRepository>(x => { return new ListingCSVFileRepository(new FileInfo("TestData\\listings.csv")); });
+            }
+            else // run level 2 code
+            {
+                services.AddDbContext<DevTestDBContext>(opt => opt.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()),
+                   ServiceLifetime.Scoped,
+                   ServiceLifetime.Scoped);
+
+                services.AddScoped<IListingRepository, ListingRepository>();
+            }
+            
             services.AddScoped<ListingService>();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

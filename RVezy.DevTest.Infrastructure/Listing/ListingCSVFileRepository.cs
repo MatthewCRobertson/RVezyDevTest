@@ -78,7 +78,7 @@ namespace RVezy.DevTest.Infrastructure.Listing
                 .ToList();
         }
 
-        public void Create(ListingEntity listing)
+        public int Create(ListingEntity listing)
         {
             // not needed for the Level 1 task.
             throw new NotImplementedException();

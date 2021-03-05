@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace RVezy.DevTest.UnitTests
 {
-    public class Tests
+    public class Level1Tests
     {
         ListingController listingController;
 

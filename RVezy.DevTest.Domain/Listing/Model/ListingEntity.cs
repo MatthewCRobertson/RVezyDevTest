@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace RVezy.DevTest.Domain.Listing.Model
 {
     public class ListingEntity
     {
+        [Key]
         public int id { get; set; }
         public string listing_url { get; set; }
         public string scrape_id { get; set; }
