@@ -13,22 +13,16 @@ using System.Text;
 
 namespace RVezy.DevTest.Infrastructure.Listing
 {
+    /*
+     *  REPO for level 1 
+     * 
+     */
     public class ListingCSVFileRepository : IListingRepository
     {
         List<ListingEntity> listings = new List<ListingEntity>();
 
         public ListingCSVFileRepository(FileInfo csvLocation)
         {
-            // CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture);
-            // TextReader reader = new StreamReader(csvLocation.FullName);
-            //
-            // csvConfig.HasHeaderRecord = true;
-            // csvConfig.LineBreakInQuotedFieldIsBadData = false;
-            // 
-            // var csvReader = new CsvReader(reader, csvConfig);
-            //
-            // listings = csvReader.GetRecords<ListingEntity>().ToList();
-
             using (TextFieldParser parser = new TextFieldParser(csvLocation.FullName))
             {
                 parser.TextFieldType = FieldType.Delimited;
