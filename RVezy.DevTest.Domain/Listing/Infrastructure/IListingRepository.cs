@@ -10,6 +10,8 @@ namespace RVezy.DevTest.Domain.Listing.Infrastructure
     {
         ListingEntity GetById(int id);
 
-        List<ListingEntity> Search(ListingSearch criteria);
+        List<ListingEntity> Search(SearchListing criteria);
+        void Create(ListingEntity listing);
+        void Update(ListingEntity listing);
     }
 }

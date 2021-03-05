@@ -30,13 +30,25 @@ namespace RVezy.Test.WebAPI.Controllers
         [HttpGet("search")]
         public List<ListingEntity> Search(int offset, int limit, string propertyType)
         {
-            ListingSearch listingSearch = new ListingSearch();
+            SearchListing listingSearch = new SearchListing();
 
             listingSearch.Limit = limit;
             listingSearch.Offset = offset;
             listingSearch.PropertyType = propertyType;
 
             return this.service.Search(listingSearch);
+        }
+
+        [HttpPost]
+        public void Create(CreateListing createListing)
+        {
+            this.service.Create(createListing);
+        }
+
+        [HttpPut]
+        public void Update(UpdateListing updateListing)
+        {
+            this.service.Update(updateListing);
         }
     }
 }

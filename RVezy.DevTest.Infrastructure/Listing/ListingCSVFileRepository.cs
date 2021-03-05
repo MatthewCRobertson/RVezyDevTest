@@ -70,12 +70,24 @@ namespace RVezy.DevTest.Infrastructure.Listing
             return listings.Where(x => x.id == id).FirstOrDefault();
         }
 
-        public List<ListingEntity> Search(ListingSearch criteria)
+        public List<ListingEntity> Search(SearchListing criteria)
         {
             return this.listings.Where(x => x.property_type == criteria.PropertyType || criteria.PropertyType == null)
                 .Skip(criteria.Offset)
                 .Take(criteria.Limit)
                 .ToList();
+        }
+
+        public void Create(ListingEntity listing)
+        {
+            // not needed for the Level 1 task.
+            throw new NotImplementedException();
+        }
+
+        public void Update(ListingEntity listing)
+        {
+            // not needed for the Level 1 task.
+            throw new NotImplementedException();
         }
     }
 }

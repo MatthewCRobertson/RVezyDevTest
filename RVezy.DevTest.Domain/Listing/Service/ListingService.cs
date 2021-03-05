@@ -21,9 +21,32 @@ namespace RVezy.DevTest.Domain.Listing.Service
             return this.repo.GetById(id);
         }
 
-        public List<ListingEntity> Search(ListingSearch criteria)
+        public List<ListingEntity> Search(SearchListing criteria)
         {
             return this.repo.Search(criteria);
+        }
+
+        public void Create(CreateListing createListing)
+        {
+            ListingEntity listing = new ListingEntity();
+
+            listing.name = createListing.Name;
+            listing.property_type = createListing.PropertyType;
+
+            this.repo.Create(listing);
+        }
+
+        public void Update(UpdateListing updateListing)
+        {
+            var listing = this.GetById(updateListing.ListingId);
+
+            if(listing != null)
+            {
+                listing.property_type = updateListing.PropertyType;
+                listing.name = updateListing.Name;
+
+                this.repo.Update(listing);
+            }
         }
     }
 }

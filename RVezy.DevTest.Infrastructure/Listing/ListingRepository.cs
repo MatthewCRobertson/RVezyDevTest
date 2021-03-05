@@ -9,12 +9,22 @@ namespace RVezy.DevTest.Infrastructure.Listing
 {
     public class ListingRepository : IListingRepository
     {
+        public void Create(ListingEntity listing)
+        {
+            throw new NotImplementedException();
+        }
+
         public ListingEntity GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<ListingEntity> Search(ListingSearch criteria)
+        public List<ListingEntity> Search(SearchListing criteria)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(ListingEntity listing)
         {
             throw new NotImplementedException();
         }
