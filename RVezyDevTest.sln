@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.Test.WebAPI", "RVezy.Test.WebAPI\RVezy.Test.WebAPI.csproj", "{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.Domain", "RVezy.DevTest.Domain\RVezy.DevTest.Domain.csproj", "{BABA2AAF-F25F-437E-83B3-B17B65946449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.Infrastructure", "RVezy.DevTest.Infrastructure\RVezy.DevTest.Infrastructure.csproj", "{D7412635-F63D-4D82-AEA0-60FDE32F16A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVezy.DevTest.UnitTests", "RVezy.DevTest.UnitTests\RVezy.DevTest.UnitTests.csproj", "{F66E6048-2A80-4145-896D-1A5247C0F8D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87EFFFA5-9B3D-4988-86E8-EBBC81A712D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABA2AAF-F25F-437E-83B3-B17B65946449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABA2AAF-F25F-437E-83B3-B17B65946449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABA2AAF-F25F-437E-83B3-B17B65946449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABA2AAF-F25F-437E-83B3-B17B65946449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7412635-F63D-4D82-AEA0-60FDE32F16A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7412635-F63D-4D82-AEA0-60FDE32F16A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7412635-F63D-4D82-AEA0-60FDE32F16A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7412635-F63D-4D82-AEA0-60FDE32F16A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66E6048-2A80-4145-896D-1A5247C0F8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66E6048-2A80-4145-896D-1A5247C0F8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66E6048-2A80-4145-896D-1A5247C0F8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66E6048-2A80-4145-896D-1A5247C0F8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

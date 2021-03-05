@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\RVezy.DevTest.Domain\RVezy.DevTest.Domain.csproj" />
+    <ProjectReference Include="..\RVezy.DevTest.Infrastructure\RVezy.DevTest.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
